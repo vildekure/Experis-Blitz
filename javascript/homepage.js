@@ -1,4 +1,4 @@
-document.getElementById('loginButton').addEventListener('click', function() {
+document.getElementById('startButton').addEventListener('click', function() {
     const username = document.getElementById('username').value;
     if(username) {
         localStorage.setItem('username', username);

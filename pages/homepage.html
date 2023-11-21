@@ -5,14 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logg Inn</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Poppins:wght@500;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="lightningBackground">
     <div id="loginContainer">
-        <h1 id="title">Velkommen til EXPERIS BLITZ</h1>
-        <input type="text" id="username" placeholder="Skriv inn ditt navn">
-        <button id="loginButton">Start Spillet</button>
-        <button id="scoreboardButton">Se Ledertavlen</button> 
+        <div class="titleContainer">
+                <div class="titleimgContainer">
+                    <img src="../images/Group 32.svg"/>
+                </div>
+            <p id="title">EXPERIS BLITZ</p>
+        </div>
 
+
+    <div class="homeScoreBoard">
+    <p>jsjspsj</p>
+    <p>jsjspsj</p>
+    <p>jsjspsj</p>
+    <button id="scoreboardButton">See ScoreBoard</button> 
+
+    </div>
+    <p id="homepagetext">Reach the high score, and win a prize!</p>
+
+        <input class="inputfield" type="text" id="username" placeholder="Enter your name">
+        <button id="startButton">Start</button>
+
+    </div>
+    <div id="ballContainer">
+
+        <img src="../images/GoldExperis.gif"/> <span> +2 </span>
+        <img src="../images/BlueBig.gif"/>  <span> + 1</span>
+        <img src="../images/Alert.gif"/> <span> - 2</span>
     </div>
     <script src="../javascript/homepage.js"></script>
 </body>
