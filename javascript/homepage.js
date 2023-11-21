@@ -7,3 +7,9 @@ document.getElementById('loginButton').addEventListener('click', function() {
         alert('Vennligst skriv inn et navn.');
     }
 });
+
+document.getElementById('scoreboardButton').addEventListener('click', function() {
+    window.location.href = 'scoreboard.html';
+});
+
+

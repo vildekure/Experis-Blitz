@@ -46,7 +46,18 @@ function startGame() {
 
     setTimeout(() => {
         gameContainer.innerHTML = '';
-        alert(`Spillet er over! Du fikk ${score} poeng.`);
-    }, 30000);
+        const username = localStorage.getItem('username');
+        const currentScore = { username: username, score: score };
+        const scoreBoard = JSON.parse(localStorage.getItem('scoreBoard')) || [];
+        scoreBoard.push(currentScore);
+        localStorage.setItem('scoreBoard', JSON.stringify(scoreBoard));
+
+        let userChoice = confirm(`Spillet er over! Du fikk ${score} poeng. Vil du se ledertavlen?`);
+        if (userChoice) {
+            window.location.href = 'scoreboard.html';
+        } else {
+            window.location.reload();
+        }
+    }, 10000);
 }
 

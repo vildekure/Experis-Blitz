@@ -2,7 +2,7 @@ window.onload = function() {
     const scoreBoard = JSON.parse(localStorage.getItem('scoreBoard')) || [];
     const scoreListElement = document.getElementById('scoreList');
 
-    scoreBoard.sort((a, b) => b.score - a.score); // Sorterer score fra høyest til lavest
+    scoreBoard.sort((a, b) => b.score - a.score);
 
     scoreBoard.forEach(entry => {
         let listItem = document.createElement('li');
@@ -10,6 +10,7 @@ window.onload = function() {
         scoreListElement.appendChild(listItem);
     });
 };
+
 
 setTimeout(() => {
     const username = localStorage.getItem('username');
