@@ -1,21 +1,95 @@
-#gameContainer {
-    width: 100vw;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(30, 30, 30);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
-    position: relative;
 }
 
-.ball {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: absolute;
-    background-color: red;
-    cursor: pointer;
+#gameContainer {
+    width: 75vw;
+    height: 75vh;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
 }
 
 #score {
+    color: white;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 24px;
 }
+
+#startButton {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.ball {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+#loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#username {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+#title{
+    font-size: 100px;
+    color: white;
+}
+
+#loginButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+#scoreBoardContainer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#scoreList {
+    list-style-type: none;
+    padding: 0;
+}
+
+
