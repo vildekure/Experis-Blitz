@@ -22,15 +22,15 @@ function startGame() {
         let ballType = Math.random();
         if (ballType < 0.7) { 
             ball.style.backgroundImage = "url('../images/BlueBig.gif')";
-            ball.onclick = () => handleBallClick(ball, 1);
+            ball.onclick = () => handleBallClick(ball, 2);
             setTimeout(() => removeBall(ball), Math.random()* (3000 - 1500) + 1500);
         } else if (ballType < 0.85) {
             ball.style.backgroundImage = "url('../images/Alert.gif')";
-            ball.onclick = () => handleBallClick(ball, -1);
+            ball.onclick = () => handleBallClick(ball, -2);
             setTimeout(() => removeBall(ball), Math.random()* (2000 - 1500) + 1500);
         } else { 
             ball.style.backgroundImage = "url('../images/GoldExperis.gif')";
-            ball.onclick = () => handleBallClick(ball, 2);
+            ball.onclick = () => handleBallClick(ball, 5);
             setTimeout(() => removeBall(ball), Math.random()* (2000 - 1500) + 1500);
         }
 

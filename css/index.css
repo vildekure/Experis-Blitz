@@ -25,22 +25,22 @@ body {
     background-size: cover;
 }
 
+#experisBackground{
+    background-image: url("../images/GameBackground.png");
+    background-size: cover;
+}
+
+
 #gameContainer {
     width: 75vw;
     height: 75vh;
-    background-color: #fff;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
 }
 
 #score {
     color: white;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 24px;
 }
 
@@ -54,11 +54,12 @@ body {
     width: 753px;
     height: 70px;
     border-radius: 24px;
-    border: 6px solid #5d7d70;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #5d7d70;
+    border: 6px solid #4C79B0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
     background-blend-mode: soft-light, normal;
     text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
     margin-bottom: 24px;
+    box-shadow: 2px 2px 2px 2px#0A0A0A;
 
 }
 
@@ -162,3 +163,12 @@ body {
     color: white;
 }
 
+/*#scoreContainer{
+    border-radius: 16px;
+    border: 5px solid #C35700;
+    background: linear-gradient(180deg, #FF7200 0%, #C35700 100%);
+    display: flex;
+    width: 219px;
+    padding: 0px 32px;
+    gap: 8px; 
+}
