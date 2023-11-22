@@ -9,9 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Poppins:wght@500;900&display=swap" rel="stylesheet">
 </head>
+
+
 <body id="lightningBackground">
     <div id="loginContainer">
         <div class="titleContainer">
+            <img id="adminlogo" src="../images/admin.svg"/>
                 <div class="titleimgContainer">
                     <img src="../images/Group 32.svg"/>
                 </div>
@@ -19,25 +22,40 @@
         </div>
 
 
-    <div class="homeScoreBoard">
-    <p>jsjspsj</p>
-    <p>jsjspsj</p>
-    <p>jsjspsj</p>
-    <button id="scoreboardButton">See ScoreBoard</button> 
-
-    </div>
-    <p id="homepagetext">Reach the high score, and win a prize!</p>
-
-
-    <div id="popupContainer" hidden>
-        <input class="inputfield" type="text" id="username" placeholder="Enter your name">
-        <input class="inputfield" type="text" id="number" placeholder="Enter your number">
-    </div>
-
+        <div class="homeScoreBoard">
+            <div id="firstPlace" class="scoreEntry">
+                <p>1. <span class="name">-</span> <span class="score">0 Points</span></p>
+            </div>
+            <div id="secondPlace" class="scoreEntry runnerUps">
+                <p>2. <span class="name">-</span> <span class="score">0 Points</span></p>
+            </div>
+            <div id="thirdPlace" class="scoreEntry runnerUps">
+                <p>3. <span class="name">-</span> <span class="score">0 Points</span></p>
+            </div>
+            <button id="scoreboardButton">See All Scores</button> 
+            <button id="startButton">Start</button>
+        </div>
 
 
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+        <img src="../images/Close.png" class="close" alt="Close"/>
+          <form id="userInfoForm">
+            <h2>User Info</h2>
+            <div id="infoContainer">
+                <input type="text" id="username" name="username" placeholder="Your Name: " required>
+                <input type="text" id="number" name="number" placeholder="Phone: " required>
+                <input type="email" id="email" name="email" placeholder="E-mail: " required>
+                <button type="submit" id="submitUserInfo">Start Game</button>
+            </div>
+          </form>
+        </div>
+      </div>
 
-        <button id="startButton">Start</button>
+
+
+
+        
 
     </div>
     <div id="ballContainer">

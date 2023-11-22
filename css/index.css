@@ -8,8 +8,12 @@ body {
     justify-content: center;
     text-align: center;
     height: 100vh;     
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: 900;
+}
+
+h2{
+    color: white;
 }
 
 .inputfield{
@@ -21,7 +25,7 @@ body {
 }
 
 #lightningBackground{
-    background-image: url("../images/LightningEpic.jpg");
+    background-image: url("../images/backgroundani.gif");
     background-size: cover;
 }
 
@@ -45,21 +49,23 @@ body {
 }
 
 #startButton {
+    margin-top: 24px;
+    padding: 8px;
+    width: 100%;
     font-size: 25px;
     font-family: "Poppins";
     font-weight: 800;
     cursor: pointer;
     text-align: center;
     color: white;
-    width: 753px;
-    height: 70px;
-    border-radius: 24px;
-    border: 6px solid #4C79B0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
+    border-radius: 16px;
+    border: 3px solid rgba(10, 10, 10, 0.35);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #08A7D2;
     background-blend-mode: soft-light, normal;
-    text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
-    margin-bottom: 24px;
-    box-shadow: 2px 2px 2px 2px#0A0A0A;
+}
+
+#startButton:hover {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #5D7D70;
 
 }
 
@@ -84,46 +90,43 @@ body {
     height: 100vh;
 }
 
-#username {
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 16px;
-}
-
 #title{
     color: white;
     font-size: 90px;
-    font-family: 'Faster One';
     font-weight: 400;
     letter-spacing: 10px;
-
-}
-
-#loginButton {
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    outline: none;
+    font-family: "Faster One";
 }
 
 #scoreboardButton{
+    padding: 8px;
+    width: 100%;
     font-size: 25px;
     font-family: "Poppins";
     font-weight: 800;
     cursor: pointer;
     text-align: center;
     color: white;
-    width: 280px;
-    height: 48px;
-    border-radius: 24px;
-    border: 6px solid #4C79B0;
+    border-radius: 16px;
+    border: 3px solid rgba(10, 10, 10, 0.35);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
-    background-blend-mode: soft-light, normal;
     text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+}
+
+#scoreboardButton:hover {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #5D7D70;
+}
+
+#firstPlace {
+    background: #FFD700;
+}
+
+.runnerUps {
+    background: #E5E5E5;
+}
+
+.name, .score {
+    font-weight: bold;
 }
 
 #scoreBoardContainer { 
@@ -148,9 +151,20 @@ body {
     margin-right: 30px; 
 }
 
+.scoreEntry {
+    font-size: 24px;
+    background: #FFFFFF;    
+    border-radius: 8px;
+    margin-bottom: 24px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .homeScoreBoard{
-    width: 449px;
-    height: 237px;
+    width: 50%;
+    padding: 24px;
     background: linear-gradient(0deg, #4C79B0 0%, #144076 100%);    
     border-radius: 16px;
     font-family: "Poppins";
@@ -160,15 +174,120 @@ body {
     color: white;
     font-size: 25px;
     text-shadow: 10px 10px 8px#211476;
-    color: white;
 }
 
-/*#scoreContainer{
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content/Box */
+.modal-content {
+    position: relative;
     border-radius: 16px;
-    border: 5px solid #C35700;
-    background: linear-gradient(180deg, #FF7200 0%, #C35700 100%);
-    display: flex;
-    width: 219px;
-    padding: 0px 32px;
-    gap: 8px; 
+    border: 5px solid #4C79B0;
+    background: #4C79B0;
+    margin: 10% auto; 
+    padding: 20px;
+    width: 30%; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px; 
+    height: 35px; 
+    cursor: pointer;
+}
+
+.close:hover {
+    transform: scale(1.1);
+}
+
+/* Style the input fields */
+input[type=text], input[type=email], input[type=tel] {
+    border-radius: 16px;
+    border: 5px solid rgba(0, 0, 0, 0.70);
+    background: #F7F6F6;
+    width: calc(100% - 32px);
+    margin-bottom: 16px;
+    height: 50px;
+    padding-left: 16px;
+}
+
+/* Style the label */
+.modal-content label {
+    margin-top: 10px;
+    display: block;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Style the submit button */
+button[type=submit] {
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 36px;
+    font-family: "Poppins";
+    font-weight: 900;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
+    background-blend-mode: soft-light, normal;
+    border: 3px solid rgba(10, 10, 10, 0.35);
+}
+
+button[type=submit]:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #5D7D70;
+}
+
+/* Style the modal to be centered in the viewport */
+.modal-content {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+/* Adjust the padding and margin of the elements */
+#userInfoForm {
+    padding: 25px;
+    border-radius: 16px;
+    border: 5px solid #4C79B0;
+    background: #4C79B0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Optionally set a max-width for larger screens */
+@media screen and (min-width: 768px) {
+    .modal-content {
+        width: 40%;
+    }
+}
+
+#infoContainer{
+    border-radius: 8px;
+    background: linear-gradient(180deg, #9DC0ED 0%, #589CEE 100%);
+    padding: 24px 8px 24px 8px;
+}
+
+#adminlogo{
+    position: absolute;
+    top: 50px;
+    right: 50px;
 }
