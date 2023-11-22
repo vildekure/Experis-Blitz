@@ -110,6 +110,13 @@ body {
     outline: none;
 }
 
+#scoreboardHeadline {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    color: white;
+}
+
 #scoreboardButton{
     font-size: 25px;
     font-family: "Poppins";
@@ -124,18 +131,85 @@ body {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
     background-blend-mode: soft-light, normal;
     text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+}   
+
+#scoreBoardContainer {
+    width: 988px;
+    height: 900px;
+    border-radius: 16px;
+    border: 5px solid #4C79B0;
+    background: linear-gradient(0deg, #4C79B0 0%, #144076 100%);
+    font-family: "Poppins";
+    margin: 20px auto; 
+    padding: 20px; 
+    overflow: hidden;
 }
 
-#scoreBoardContainer { 
+.playerContainer {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 20px; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+    border-radius: 8px;
+    border: 5px solid #FFF;
+    background: linear-gradient(90deg, #BEBEBE 0%, #FFF 100%);
+}
+
+.playerContainer:first-child {
+    width: 30%;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 20px; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+    border-radius: 8px;
+    border: 5px solid #FFD749;
+    background: linear-gradient(90deg, #FFD749 0%, #FFB800 68.23%);
+}
+
+.playerContainer p {
+    margin: 0; 
+    color: #333;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.36px;
+}
+
+#scoreboardHeadline {
     text-align: center;
     margin-top: 50px;
     font-size: 50px;
     color: white;
 }
 
-#scoreList {
-    list-style-type: none;
-    padding: 0;
+#playAgainButton {
+    font-size: 25px;
+    font-family: "Poppins";
+    font-weight: 800;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    width: 280px;
+    height: 48px;
+    border-radius: 24px;
+    border: 6px solid #4C79B0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
+    background-blend-mode: soft-light, normal;
+    text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
 }
 
 .titleContainer {
