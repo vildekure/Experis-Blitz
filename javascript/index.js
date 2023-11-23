@@ -1,13 +1,20 @@
 document.getElementById('startButtonGamePage').addEventListener('click', startGame);
 
+var gameMusic = document.getElementById('gameMusic');
+    gameMusic.volume = 0.4;
+    gameMusic.play();
+
+
 function startGame() {
+    document.getElementById('startButtonGamePage').style.display = 'none';
+
     let score = 0;
     let gameContainer = document.getElementById('gameContainer');
     let scoreDisplay = document.getElementById('score');
     let timerDisplay = document.getElementById('timer');
-    let timeLeft = 10; // Spill varer i 10 sekunder
+    let timeLeft = 20;
 
-    // Oppdater timeren på skjermen umiddelbart
+  
     timerDisplay.textContent = formatTime(timeLeft);
 
     // Start et intervall som teller ned hvert sekund
@@ -18,7 +25,6 @@ function startGame() {
         // Når nedtellingen når 0, stopper vi intervallet
         if (timeLeft <= 0) {
             clearInterval(timerId);
-            // Du kan legge til ekstra logikk her om nødvendig når tiden går ut
         }
     }, 1000);
 
@@ -77,25 +83,28 @@ function startGame() {
     }
 
     setTimeout(() => {
-        clearInterval(timerId); // Stopper intervallet
-        timerDisplay.textContent = '00:00'; 
         gameContainer.innerHTML = '';
         const username = localStorage.getItem('username');
         const currentScore = { username: username, score: score };
         const scoreBoard = JSON.parse(localStorage.getItem('scoreBoard')) || [];
         scoreBoard.push(currentScore);
         localStorage.setItem('scoreBoard', JSON.stringify(scoreBoard));
-
-        let userChoice = confirm(`Spillet er over! Du fikk ${score} poeng. Vil du se ledertavlen?`);
-        if (userChoice) {
+        
+        // Oppdater og vis modalen i stedet for å bruke confirm
+        document.getElementById('finalScore').textContent = score;
+        document.getElementById('endGameModal').style.display = 'block';
+        
+        document.getElementById('viewLeaderboard').addEventListener('click', () => {
             window.location.href = 'scoreboard.html';
-        } else {
+        });
+        
+        // Håndter klikk på "Spill igjen" knappen
+        document.getElementById('playAgain').addEventListener('click', () => {
             window.location.reload();
-        }
-    }, 10000);
+        });
+    }, 20000);
 }
 
 function formatTime(seconds) {
-    // Formatterer tiden som en streng MM:SS
     return seconds > 9 ? `00:${seconds}` : `00:0${seconds}`;
 }

@@ -28,35 +28,40 @@ h2{
     background-size: cover;
 }
 
-#experisBackground{
+#experisBackground {
     background-image: url("../images/GameBackground.png");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 
 #gameContainer {
     width: 75vw;
-    height: 75vh;
+    height: 73vh;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
+    margin-top: 50px;
 }
 
 #score{
     position: absolute;
     color: white;
-    font-size: 24px;
+    font-size: 36px;
     border-radius: 16px;
     border: 5px solid #C35700;
     background: linear-gradient(180deg, #FF7200 0%, #C35700 100%);
     display: flex;
-    width: 180px;
+    width: 219px;
     padding: 0px 32px;
     justify-content: center;
     align-items: center;
     gap: 8px;
     right: 50px;
     top: 5px;
+    height: 55px;
 }
 
 #startButton {
@@ -175,16 +180,17 @@ h2{
     border: 5px solid #4C79B0;
     background: linear-gradient(0deg, #4C79B0 0%, #144076 100%);
     font-family: "Poppins";
+    font-weight: 900;
     margin: 20px auto; 
     padding: 20px; 
     overflow: hidden;
 }
 
 .playerContainer {
-    width: 30%;
+    width: 50%;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center; 
     margin-bottom: 20px; 
     border-radius: 8px; 
@@ -233,9 +239,9 @@ h2{
 
 #playAgainButton {
     font-size: 25px;
-    font-family: "Poppins";
     font-weight: 800;
     cursor: pointer;
+    margin-bottom: 20px;
     text-align: center;
     color: white;
     width: 280px;
@@ -429,4 +435,37 @@ button[type=submit]:hover {
     color: white;
     height: -30px;
     font-size: 25px;
+}
+
+#endGameMessage{
+    color: #FFF;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.54px;
+}
+
+#viewLeaderboard{
+    padding: 8px;
+    width: 100%;
+    font-size: 25px;
+    font-family: "Poppins";
+    font-weight: 800;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    border-radius: 16px;
+    border: 3px solid rgb(10, 10, 10);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
+    text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+}
+
+#messageContainer{
+    border-radius: 8px;
+    background: linear-gradient(180deg, #9DC0ED 0%, #589CEE 100%);
+    padding: 30px;
+    margin-bottom: 20px;
 }

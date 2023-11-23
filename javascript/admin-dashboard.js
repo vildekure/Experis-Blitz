@@ -1,6 +1,6 @@
 
-function saveScore(username, phone, email, score) {
-    const newEntry = { username, phone, email, score };
+function saveScore(username, number, email, score) {
+    const newEntry = { username, number, email, score };
     const scoreBoard = JSON.parse(localStorage.getItem('scoreBoard')) || [];
     scoreBoard.push(newEntry);
     localStorage.setItem('scoreBoard', JSON.stringify(scoreBoard));
@@ -16,13 +16,13 @@ window.onload = function() {
         let row = tableBody.insertRow();
         let cellRank = row.insertCell(0);
         let cellName = row.insertCell(1);
-        let cellPhone = row.insertCell(2);
+        let cellNumber = row.insertCell(2);
         let cellEmail = row.insertCell(3);
         let cellScore = row.insertCell(4);
 
         cellRank.innerHTML = index < 3 ? `<span class="medal">${['🥇', '🥈', '🥉'][index]}</span>` : '';
         cellName.textContent = entry.username;
-        cellPhone.textContent = entry.number;
+        cellNumber.textContent = entry.number;
         cellEmail.email = entry.email;
         cellScore.textContent = entry.score;
     });

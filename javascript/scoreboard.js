@@ -17,7 +17,7 @@ window.onload = function() {
         container.appendChild(playerElement);
 
         let scoreElement = document.createElement('p');
-        scoreElement.textContent = `Score: ${entry.score} points`;
+        scoreElement.textContent = `${entry.score} points`;
         container.appendChild(scoreElement);
 
         scoreBoardContainer.appendChild(container);

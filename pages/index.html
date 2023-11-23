@@ -8,13 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Poppins:wght@500;900&display=swap" rel="stylesheet">
+    <audio id="gameMusic" loop>
+        <source src="../sounds/normal.mp3" type="audio/mpeg">
+    </audio>
 </head>
 <body id="experisBackground">
     <h1 id="score">Poeng: 0</h1>
-    <div id="timer">00:10</div>
+    <div id="timer">00:20</div>
     <button id="startButtonGamePage">Start Spill</button>
     <div id="gameContainer"></div>
     <div id="scoreContainer">
+    </div>
+    <div id="endGameModal" class="modal">
+        <div class="modal-content">
+            <div id="messageContainer">
+            <p id="endGameMessage">Spillet er over! Du fikk <span id="finalScore">0</span> poeng.</p>
+            <p id="endGameMessage"> Nice Try!</p>
+            </div>
+            <button id="viewLeaderboard">Se ledertavlen</button>
+        </div>
     </div>
     <script src="../javascript/index.js"></script>
 </body>

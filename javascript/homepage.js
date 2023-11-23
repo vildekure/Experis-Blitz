@@ -33,6 +33,17 @@ document.querySelector('.close').addEventListener('click', function() {
     document.getElementById('userModal').style.display = 'none';
 });
 
+document.getElementById('startButton').addEventListener('click', function() {
+    var sound = document.getElementById('buttonSound');
+    sound.play();
+    sound.volume = 9;
+});
+
+var gameMusic = document.getElementById('gameMusic');
+gameMusic.play();
+gameMusic.volume = 0.4;
+
+
 // When the user submits the form
 document.getElementById('userInfoForm').addEventListener('submit', function(event) {
     event.preventDefault();
