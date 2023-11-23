@@ -22,8 +22,8 @@ window.onload = function() {
 
         cellRank.innerHTML = index < 3 ? `<span class="medal">${['🥇', '🥈', '🥉'][index]}</span>` : '';
         cellName.textContent = entry.username;
-        cellPhone.textContent = entry.phone;
-        cellEmail.textContent = entry.email;
+        cellPhone.textContent = entry.number;
+        cellEmail.email = entry.email;
         cellScore.textContent = entry.score;
     });
 };
@@ -47,16 +47,4 @@ document.getElementById('deleteButton').addEventListener('click', deleteHistory)
     });
 
 
-document.getElementById('scoreForm').addEventListener('submit', function(event) {
-    event.preventDefault();
 
-    const username = document.getElementById('username').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
-    const score = parseInt(document.getElementById('score').value, 10);
-
-    saveScore(username, phone, email, score);
-
-
-    window.location.reload();
-});

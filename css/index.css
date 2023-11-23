@@ -7,7 +7,6 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100vh;     
     font-family: "Poppins";
     font-weight: 900;
 }
@@ -61,7 +60,7 @@ h2{
 }
 
 #startButton {
-    margin-top: 24px;
+    margin-top: 16px;
     padding: 8px;
     width: 100%;
     font-size: 25px;
@@ -71,7 +70,7 @@ h2{
     text-align: center;
     color: white;
     border-radius: 16px;
-    border: 3px solid rgba(10, 10, 10, 0.35);
+    border: 3px solid rgb(10, 10, 10);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #08A7D2;
     background-blend-mode: soft-light, normal;
 }
@@ -83,7 +82,7 @@ h2{
 
 #startButtonGamePage {
     width: 40%;
-    margin-top: 25px;
+    margin-top: 155px;
     padding: 8px;
     font-size: 25px;
     font-family: "Poppins";
@@ -120,7 +119,6 @@ h2{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
 #title{
@@ -141,7 +139,7 @@ h2{
     text-align: center;
     color: white;
     border-radius: 16px;
-    border: 3px solid rgba(10, 10, 10, 0.35);
+    border: 3px solid rgb(10, 10, 10);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
     text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
 }
@@ -151,15 +149,23 @@ h2{
 }
 
 #firstPlace {
-    background: #FFD700;
+    border: 5px solid #FFD749;
+    background: linear-gradient(0deg, #FFD749 0%, #FFB800 68.23%);
 }
 
 .runnerUps {
-    background: #E5E5E5;
+    border: 5px solid #FFF;
+    background: linear-gradient(0deg, #BEBEBE 0%, #FFF 100%);
 }
 
-.name, .score {
+.name {
     font-weight: bold;
+}
+
+.score{
+    text-align: right;
+    font-family: "Faster One";
+    font-weight: 400;
 }
 
 #scoreBoardContainer { 
@@ -178,7 +184,7 @@ h2{
     display: flex; 
     align-items: center; 
     justify-content: center; 
-    margin-top: 5%;
+    margin-bottom: -50px;
 }
 
 .titleimgContainer {
@@ -189,7 +195,8 @@ h2{
     font-size: 24px;
     background: #FFFFFF;    
     border-radius: 8px;
-    margin-bottom: 24px;
+    height: 35px;
+    margin-bottom: 16px;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -202,6 +209,7 @@ h2{
     background: linear-gradient(0deg, #4C79B0 0%, #144076 100%);    
     border-radius: 16px;
     font-family: "Poppins";
+    height: 40%;
 }
 
 #homepagetext{
