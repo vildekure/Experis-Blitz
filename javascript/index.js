@@ -1,9 +1,26 @@
-document.getElementById('startButton').addEventListener('click', startGame);
+document.getElementById('startButtonGamePage').addEventListener('click', startGame);
 
 function startGame() {
     let score = 0;
     let gameContainer = document.getElementById('gameContainer');
     let scoreDisplay = document.getElementById('score');
+    let timerDisplay = document.getElementById('timer');
+    let timeLeft = 10; // Spill varer i 10 sekunder
+
+    // Oppdater timeren på skjermen umiddelbart
+    timerDisplay.textContent = formatTime(timeLeft);
+
+    // Start et intervall som teller ned hvert sekund
+    let timerId = setInterval(() => {
+        timeLeft -= 1;
+        timerDisplay.textContent = formatTime(timeLeft);
+
+        // Når nedtellingen når 0, stopper vi intervallet
+        if (timeLeft <= 0) {
+            clearInterval(timerId);
+            // Du kan legge til ekstra logikk her om nødvendig når tiden går ut
+        }
+    }, 1000);
 
     function updateScore(points) {
         score += points;
@@ -60,6 +77,8 @@ function startGame() {
     }
 
     setTimeout(() => {
+        clearInterval(timerId); // Stopper intervallet
+        timerDisplay.textContent = '00:00'; 
         gameContainer.innerHTML = '';
         const username = localStorage.getItem('username');
         const currentScore = { username: username, score: score };
@@ -76,3 +95,7 @@ function startGame() {
     }, 10000);
 }
 
+function formatTime(seconds) {
+    // Formatterer tiden som en streng MM:SS
+    return seconds > 9 ? `00:${seconds}` : `00:0${seconds}`;
+}

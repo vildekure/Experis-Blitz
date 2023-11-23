@@ -43,9 +43,21 @@ h2{
     border-radius: 15px;
 }
 
-#score {
+#score{
+    position: absolute;
     color: white;
     font-size: 24px;
+    border-radius: 16px;
+    border: 5px solid #C35700;
+    background: linear-gradient(180deg, #FF7200 0%, #C35700 100%);
+    display: flex;
+    width: 180px;
+    padding: 0px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    right: 50px;
+    top: 5px;
 }
 
 #startButton {
@@ -65,6 +77,27 @@ h2{
 }
 
 #startButton:hover {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #5D7D70;
+
+}
+
+#startButtonGamePage {
+    width: 40%;
+    margin-top: 25px;
+    padding: 8px;
+    font-size: 25px;
+    font-family: "Poppins";
+    font-weight: 800;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    border-radius: 16px;
+    border: 3px solid rgba(10, 10, 10, 0.35);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #08A7D2;
+    background-blend-mode: soft-light, normal;
+}
+
+#startButtonGamePage:hover {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #5D7D70;
 
 }
@@ -92,7 +125,7 @@ h2{
 
 #title{
     color: white;
-    font-size: 90px;
+    font-size: 110px;
     font-weight: 400;
     letter-spacing: 10px;
     font-family: "Faster One";
@@ -145,6 +178,7 @@ h2{
     display: flex; 
     align-items: center; 
     justify-content: center; 
+    margin-top: 5%;
 }
 
 .titleimgContainer {
@@ -290,4 +324,34 @@ button[type=submit]:hover {
     position: absolute;
     top: 50px;
     right: 50px;
+}
+
+#timer{
+    border-radius: 16px;
+    border: 5px solid #153760;
+    background: linear-gradient(180deg, #4C79B0 0%, #0F3058 100%);
+    padding: 0px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 48px;
+    position: absolute;
+    top: 20px;
+    right: 50;
+    height: 72px;
+    padding: 0px 32px;
+}
+
+#ballContainer{
+    display: flex; /* Aktiverer flexbox */
+    align-items: center; /* Sentrerer elementene vertikalt */
+    justify-content: center; /* Sentrerer elementene horisontalt */
+    gap: 20px
+}
+
+.frontpagePoints {
+    color: white;
+    height: -30px;
+    font-size: 25px;
 }
