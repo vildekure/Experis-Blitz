@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    font-family: 'Poppins';
+    font-weight: 900;
+    background-image: url("../images/backgroundani.gif");
+    background-size: cover;
+}
+
+.inputfield {
+    width: 700px;
+    height: 60px;
+    border-radius: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Poppins";
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: #000;
+}
+
+.inputfield::placeholder {
+    color: #333; 
+    opacity: 1; 
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5); 
+}
+
+#loginContainer {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 16px;
+    width: fit-content;
+    box-shadow: 0px 0px 10px 3px #000;
+}
+
+#loginButton {
+    width: 733px;
+    height: 60px;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    border-radius: 16px;
+    border: 6px solid #4C79B0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
+    background-blend-mode: soft-light, normal;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px 2px #0A0A0A;
+    outline: none;
+}

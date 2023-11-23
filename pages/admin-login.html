@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Innlogging</title>
+<link rel="stylesheet" href="../css/admin-login.css">
+</head>
+<body>
+
+<div id="loginContainer">
+  <h2 style="color: white;">Admin Innlogging</h2>
+  <input type="text" id="username" class="inputfield" placeholder="Brukernavn" required>
+  <input type="password" id="password" class="inputfield" placeholder="Passord" required>
+  <button id="loginButton" onclick="login()">Logg Inn</button>
+</div>
+
+<script>
+  function login() {
+    // login functionality 
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    
+    // authentication
+    if(username === "admin" && password === "secret") {
+      // Redirect to admin dashboard
+      window.location.href = 'admin-dashboard.html';
+    } else {
+      alert('Feil brukernavn eller passord!');
+    }
+  }
+</script>
+
+</body>
+</html>
