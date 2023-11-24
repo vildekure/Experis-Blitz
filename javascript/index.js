@@ -15,7 +15,7 @@ function startGame() {
 	let gameContainer = document.getElementById("gameContainer");
 	let scoreDisplay = document.getElementById("score");
 	let timerDisplay = document.getElementById("timer");
-	let timeLeft = 20;
+	let timeLeft = 2;
 
 	timerDisplay.textContent = formatTime(timeLeft);
 
@@ -118,10 +118,10 @@ function startGame() {
 			});
 
 		// Håndter klikk på "Spill igjen" knappen
-		document.getElementById("playAgain").addEventListener("click", () => {
-			window.location.reload();
+		document.getElementById("newgameButton").addEventListener("click", () => {
+			window.location.href = "homepage.html";
 		});
-	}, 20000);
+	}, 2000);
 }
 
 function formatTime(seconds) {
