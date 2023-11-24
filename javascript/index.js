@@ -3,6 +3,8 @@ document
 	.addEventListener("click", startGame);
 
 var gameMusic = document.getElementById("gameMusic");
+var isMuted = localStorage.getItem("isMuted") === "true";
+gameMusic.muted = isMuted;
 gameMusic.volume = 0.4;
 gameMusic.play();
 

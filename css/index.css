@@ -449,10 +449,53 @@ button[type="submit"]:hover {
 	padding: 24px 8px 24px 8px;
 }
 
+#muteButton,
 #adminlogo {
+	width: 35px;
+	height: 35px;
+}
+
+#muteButtonDiv {
 	position: absolute;
-	top: 50px;
-	right: 50px;
+	top: 30px;
+	right: calc(
+		50px + 35px + 22px
+	); /* Right position of admin button + width of admin button + desired spacing */
+	border-radius: 16px;
+	border: 3px solid var(--Bl, #4c79b0);
+	background: var(
+		--Lys-bl,
+		linear-gradient(180deg, #9dc0ed 0%, #589cee 100%)
+	);
+	width: 40px;
+	padding: 12px;
+}
+
+#adminButtonDiv {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	border-radius: 16px;
+	border: 3px solid var(--Bl, #4c79b0);
+	background: var(
+		--Lys-bl,
+		linear-gradient(180deg, #9dc0ed 0%, #589cee 100%)
+	);
+	width: 40px;
+	padding: 12px;
+}
+
+.button-style {
+	display: inline-block;
+	padding: 10px; /* Adjust if needed */
+	border-radius: 5px;
+	background-color: #007bff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+
+.button-style:hover {
+	background-color: #0056b3;
 }
 
 #timer {
