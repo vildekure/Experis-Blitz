@@ -19,6 +19,14 @@ window.onload = function () {
 		let cellEmail = row.insertCell(3);
 		let cellScore = row.insertCell(4);
 
+		let deleteCell = row.insertCell(5); 
+        let deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.className = "deleteUserButton";
+        deleteButton.onclick = function() { deleteUser(entry.username); }; 
+        deleteCell.appendChild(deleteButton);
+
+
 		cellRank.innerHTML =
 			index < 3
 				? `<span class="medal">${["🥇", "🥈", "🥉"][index]}</span>`
@@ -31,10 +39,22 @@ window.onload = function () {
 };
 
 function deleteHistory() {
-	localStorage.removeItem("scoreBoard");
-	const tableBody = document.querySelector("#adminContent table tbody");
-	tableBody.innerHTML = "";
+	if (confirm("Are you sure you want to delete all data. YOU CAN'T RESTORE IT!")) {
+        localStorage.removeItem("scoreBoard");
+        const tableBody = document.querySelector("#adminContent table tbody");
+        tableBody.innerHTML = "";
+    }
 }
+
+function deleteUser(username) {
+    if (confirm(`Are you sure you want to delete: ${username}?`)) {
+        let scoreBoard = JSON.parse(localStorage.getItem("scoreBoard")) || [];
+        scoreBoard = scoreBoard.filter(entry => entry.username !== username);
+        localStorage.setItem("scoreBoard", JSON.stringify(scoreBoard));
+        location.reload(); // Reload the page to update the table
+    }
+}
+
 
 function logout() {
 	window.location.href = "/";

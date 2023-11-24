@@ -2,6 +2,12 @@ var gameMusic = document.getElementById("gameMusic");
 
 var isMuted = localStorage.getItem("isMuted") === "true";
 
+document.addEventListener("DOMContentLoaded", function(){
+	var gameMusic = document.getElementById("gameMusic");
+	gameMusic.play();
+	gameMusic.volume = 0.4;
+})
+
 function toggleMute() {
 	isMuted = !isMuted;
 	localStorage.setItem("isMuted", isMuted);
@@ -12,6 +18,11 @@ function toggleMute() {
 }
 
 window.onload = function () {
+
+	var gameMusic = document.getElementById("gameMusic");
+	gameMusic.play();
+	gameMusic.volume = 0.4;
+
 	// Fetch the scores from localStorage
 	const scoreBoard = JSON.parse(localStorage.getItem("scoreBoard")) || [];
 	scoreBoard.sort((a, b) => b.score - a.score); // Sort to get the highest scores first
@@ -37,9 +48,6 @@ window.onload = function () {
 	updateScoreDisplay("secondPlace", 2, topThree[1]);
 	updateScoreDisplay("thirdPlace", 3, topThree[2]);
 
-	var gameMusic = document.getElementById("gameMusic");
-	gameMusic.play();
-	gameMusic.volume = 0.4;
 
 	// Set the initial state of the music based on the mute state
 	gameMusic.muted = isMuted;
@@ -67,9 +75,6 @@ document.getElementById("startButton").addEventListener("click", function () {
 	sound.volume = 9;
 });
 
-var gameMusic = document.getElementById("gameMusic");
-gameMusic.play();
-gameMusic.volume = 0.4;
 
 // When the user submits the form
 document

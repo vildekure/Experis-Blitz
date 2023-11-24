@@ -15,7 +15,7 @@ function startGame() {
 	let gameContainer = document.getElementById("gameContainer");
 	let scoreDisplay = document.getElementById("score");
 	let timerDisplay = document.getElementById("timer");
-	let timeLeft = 2;
+	let timeLeft = 20;
 
 	timerDisplay.textContent = formatTime(timeLeft);
 
@@ -83,8 +83,31 @@ function startGame() {
 
 	function handleBallClick(ball, points) {
 		updateScore(points);
-		ball.remove();
-		createBall();
+    
+    // Create a new points element
+    let pointsDiv = document.createElement("div");
+    pointsDiv.classList.add("points");
+    pointsDiv.textContent = (points > 0 ? "+" : "") + points; // Add '+' sign for positive points
+    pointsDiv.style.left = ball.style.left;
+    pointsDiv.style.top = ball.style.top;
+
+    // Add the points element to the game container
+    gameContainer.appendChild(pointsDiv);
+
+    // Animate the points element
+    setTimeout(() => {
+        pointsDiv.style.opacity = 0;
+        pointsDiv.style.top = parseFloat(ball.style.top) - 10 + "vh";
+    }, 100);
+
+    // Remove the points element after animation
+    setTimeout(() => {
+        pointsDiv.remove();
+    }, 1000); // Adjust time based on your animation duration
+
+    // Remove the ball and create a new one
+    ball.remove();
+    createBall();
 	}
 
 	gameContainer.innerHTML = "";
@@ -107,7 +130,6 @@ function startGame() {
 		scoreBoard.push(currentScore);
 		localStorage.setItem("scoreBoard", JSON.stringify(scoreBoard));
 
-		// Oppdater og vis modalen i stedet for å bruke confirm
 		document.getElementById("finalScore").textContent = score;
 		document.getElementById("endGameModal").style.display = "block";
 
@@ -121,7 +143,7 @@ function startGame() {
 		document.getElementById("newgameButton").addEventListener("click", () => {
 			window.location.href = "homepage.html";
 		});
-	}, 2000);
+	}, 20000);
 }
 
 function formatTime(seconds) {

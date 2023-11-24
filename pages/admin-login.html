@@ -5,14 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin Innlogging</title>
 <link rel="stylesheet" href="../css/admin-login.css">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Faster+One&family=Poppins:wght@500;900&display=swap"
+			rel="stylesheet"
+		/>
 </head>
 <body>
 
 <div id="loginContainer">
-  <h2 style="color: white;">Admin Innlogging</h2>
-  <input type="text" id="username" class="inputfield" placeholder="Brukernavn" required>
-  <input type="password" id="password" class="inputfield" placeholder="Passord" required>
-  <button id="loginButton" onclick="login()">Logg Inn</button>
+  <h2 style="color: white;">Admin Login</h2>
+  <input type="text" id="username" class="inputfield" placeholder="Username" required>
+  <input type="password" id="password" class="inputfield" placeholder="Password" required>
+  <button id="loginButton" onclick="login()">Login</button>
 </div>
 
 <script>
@@ -26,7 +32,7 @@
       // Redirect to admin dashboard
       window.location.href = 'admin-dashboard.html';
     } else {
-      alert('Feil brukernavn eller passord!');
+      alert('Wrong username or password!');
     }
   }
 </script>

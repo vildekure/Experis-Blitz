@@ -180,6 +180,16 @@ h2 {
 		#5d7d70;
 }
 
+.points {
+    position: absolute;
+    color: #fff; /* Choose a color that is visible on your background */
+    font-size: 1.2em;
+    font-weight: bold;
+    opacity: 1;
+    transition: top 0.9s ease-out, opacity 0.9s ease-out;
+}
+
+
 #firstPlace {
 	border: 5px solid #ffd749;
 	background: linear-gradient(0deg, #ffd749 0%, #ffb800 68.23%);
@@ -538,8 +548,9 @@ button[type="submit"]:hover {
 
 .frontpagePoints {
 	color: white;
-	margin-left: -75px;
+	margin-left: -70px;
 	font-size: 25px;
+	text-shadow: -2px -2px 0 #4450AB, 2px -2px 0 #4450AB,-2px 2px 0 #4450AB,2px 2px 0 #4450AB;
 }
 
 #endGameMessage {
