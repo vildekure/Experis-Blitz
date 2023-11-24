@@ -10,6 +10,7 @@ gameMusic.play();
 
 function startGame() {
 	document.getElementById("startButtonGamePage").style.display = "none";
+	document.getElementById("gameMessage").style.display = "none";
 
 	let score = 0;
 	let gameContainer = document.getElementById("gameContainer");

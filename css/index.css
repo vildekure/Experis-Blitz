@@ -546,6 +546,11 @@ button[type="submit"]:hover {
 	gap: 20px;
 }
 
+#gameMessage{
+	color: white;
+	font-size: 25px;
+}
+
 .frontpagePoints {
 	color: white;
 	margin-left: -70px;
