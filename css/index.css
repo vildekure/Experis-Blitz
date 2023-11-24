@@ -1,471 +1,525 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(30, 30, 30);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: "Poppins";
-    font-weight: 900;
+	margin: 0;
+	padding: 0;
+	background-color: rgb(30, 30, 30);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-family: "Poppins";
+	font-weight: 900;
 }
 
-h2{
-    color: white;
+h2 {
+	color: white;
 }
 
-.inputfield{
-    width: 733px;
-    height: 60px;
-    border-radius: 16px;
-    font-weight: 400;
-    font-family: "Poppins";
+.inputfield {
+	width: 733px;
+	height: 60px;
+	border-radius: 16px;
+	font-weight: 400;
+	font-family: "Poppins";
 }
 
-#lightningBackground{
-    background-image: url("../images/backgroundani.gif");
-    background-size: cover;
+#lightningBackground {
+	background-image: url("../images/backgroundani.gif");
+	background-size: cover;
 }
 
 #experisBackground {
-    background-image: url("../images/GameBackground.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+	background-image: url("../images/GameBackground.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 }
-
 
 #gameContainer {
-    width: 75vw;
-    height: 73vh;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    margin-top: 50px;
+	width: 75vw;
+	height: 73vh;
+	position: relative;
+	overflow: hidden;
+	border-radius: 15px;
+	margin-top: 50px;
 }
 
-#score{
-    position: absolute;
-    color: white;
-    font-size: 36px;
-    border-radius: 16px;
-    border: 5px solid #C35700;
-    background: linear-gradient(180deg, #FF7200 0%, #C35700 100%);
-    display: flex;
-    width: 219px;
-    padding: 0px 32px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    right: 50px;
-    top: 5px;
-    height: 55px;
+#score {
+	position: absolute;
+	color: white;
+	font-size: 36px;
+	border-radius: 16px;
+	border: 5px solid #c35700;
+	background: linear-gradient(180deg, #ff7200 0%, #c35700 100%);
+	display: flex;
+	width: 219px;
+	padding: 0px 32px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	right: 50px;
+	top: 5px;
+	height: 55px;
 }
 
 #startButton {
-    margin-top: 16px;
-    padding: 8px;
-    width: 100%;
-    font-size: 25px;
-    font-family: "Poppins";
-    font-weight: 800;
-    cursor: pointer;
-    text-align: center;
-    color: white;
-    border-radius: 16px;
-    border: 3px solid rgb(10, 10, 10);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #08A7D2;
-    background-blend-mode: soft-light, normal;
+	margin-top: 16px;
+	padding: 8px;
+	width: 100%;
+	font-size: 25px;
+	font-family: "Poppins";
+	font-weight: 800;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	border-radius: 16px;
+	border: 3px solid rgb(10, 10, 10);
+	background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.25) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#08a7d2;
+	background-blend-mode: soft-light, normal;
 }
 
 #startButton:hover {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #5D7D70;
-
+	background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.25) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#5d7d70;
 }
 
 #startButtonGamePage {
-    width: 40%;
-    margin-top: 155px;
-    padding: 8px;
-    font-size: 25px;
-    font-family: "Poppins";
-    font-weight: 800;
-    cursor: pointer;
-    text-align: center;
-    color: white;
-    border-radius: 16px;
-    border: 3px solid rgba(10, 10, 10, 0.35);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #08A7D2;
-    background-blend-mode: soft-light, normal;
+	width: 40%;
+	margin-top: 155px;
+	padding: 8px;
+	font-size: 25px;
+	font-family: "Poppins";
+	font-weight: 800;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	border-radius: 16px;
+	border: 3px solid rgba(10, 10, 10, 0.35);
+	background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.25) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#08a7d2;
+	background-blend-mode: soft-light, normal;
 }
 
 #startButtonGamePage:hover {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #5D7D70;
-
+	background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.25) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#5d7d70;
 }
 
 .ball {
-    width: 200px; 
-    height: 200px;
-    border-radius: 50%;
-    clip-path: circle(30% at 50% 50%);
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	clip-path: circle(30% at 50% 50%);
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
 }
-
 
 #loginContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-#title{
-    color: white;
-    font-size: 110px;
-    font-weight: 400;
-    letter-spacing: 10px;
-    font-family: "Faster One";
+#title {
+	color: white;
+	font-size: 110px;
+	font-weight: 400;
+	letter-spacing: 10px;
+	font-family: "Faster One";
 }
 
-#scoreboardButton{
-    padding: 8px;
-    width: 100%;
-    font-size: 25px;
-    font-family: "Poppins";
-    font-weight: 800;
-    cursor: pointer;
-    text-align: center;
-    color: white;
-    border-radius: 16px;
-    border: 3px solid rgb(10, 10, 10);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
-    text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+#scoreboardButton {
+	padding: 8px;
+	width: 100%;
+	font-size: 25px;
+	font-family: "Poppins";
+	font-weight: 800;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	border-radius: 16px;
+	border: 3px solid rgb(10, 10, 10);
+	background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.25) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#4c79b0;
+	text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.2),
+		0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
 }
 
 #scoreboardButton:hover {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #5D7D70;
+	background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.25) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#5d7d70;
 }
 
 #firstPlace {
-    border: 5px solid #FFD749;
-    background: linear-gradient(0deg, #FFD749 0%, #FFB800 68.23%);
+	border: 5px solid #ffd749;
+	background: linear-gradient(0deg, #ffd749 0%, #ffb800 68.23%);
 }
 
 .runnerUps {
-    border: 5px solid #FFF;
-    background: linear-gradient(0deg, #BEBEBE 0%, #FFF 100%);
+	border: 5px solid #fff;
+	background: linear-gradient(0deg, #bebebe 0%, #fff 100%);
 }
 
 .name {
-    font-weight: bold;
+	font-weight: bold;
 }
 
-.score{
-    text-align: right;
-    font-family: "Faster One";
-    font-weight: 400;
+.score {
+	text-align: right;
+	font-family: "Faster One";
+	font-weight: 400;
 }
 
 #scoreBoardContainer {
-    width: 988px;
-    height: 900px;
-    border-radius: 16px;
-    border: 5px solid #4C79B0;
-    background: linear-gradient(0deg, #4C79B0 0%, #144076 100%);
-    font-family: "Poppins";
-    font-weight: 900;
-    margin: 20px auto; 
-    padding: 20px; 
-    overflow: hidden;
+	width: 988px;
+	height: 900px;
+	border-radius: 16px;
+	border: 5px solid #4c79b0;
+	background: linear-gradient(0deg, #4c79b0 0%, #144076 100%);
+	font-family: "Poppins";
+	font-weight: 900;
+	margin: 20px auto;
+	padding: 20px;
+	overflow: hidden;
 }
 
 .playerContainer {
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    margin-bottom: 20px; 
-    border-radius: 8px; 
-    overflow: hidden; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px; 
-    border-radius: 8px;
-    border: 5px solid #FFF;
-    background: linear-gradient(90deg, #BEBEBE 0%, #FFF 100%);
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	border-radius: 8px;
+	border: 5px solid #fff;
+	background: linear-gradient(90deg, #bebebe 0%, #fff 100%);
 }
 
 .playerContainer:first-child {
-    width: 30%;
-    margin: 0 auto; 
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    margin-bottom: 20px; 
-    border-radius: 8px; 
-    overflow: hidden; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px; 
-    border-radius: 8px;
-    border: 5px solid #FFD749;
-    background: linear-gradient(90deg, #FFD749 0%, #FFB800 68.23%);
+	width: 30%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	border-radius: 8px;
+	border: 5px solid #ffd749;
+	background: linear-gradient(90deg, #ffd749 0%, #ffb800 68.23%);
 }
 
 .playerContainer p {
-    margin: 0; 
-    color: #333;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    letter-spacing: -0.36px;
+	margin: 0;
+	color: #333;
+	text-align: center;
+	font-family: Poppins;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+	letter-spacing: -0.36px;
 }
 
 #scoreboardHeadline {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 50px;
-    color: white;
+	text-align: center;
+	margin-top: 50px;
+	font-size: 50px;
+	color: white;
 }
 
 #playAgainButton {
-    font-size: 25px;
-    font-weight: 800;
-    cursor: pointer;
-    margin-bottom: 20px;
-    text-align: center;
-    color: white;
-    width: 280px;
-    height: 48px;
-    border-radius: 24px;
-    border: 6px solid #4C79B0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
-    background-blend-mode: soft-light, normal;
-    text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+	font-size: 25px;
+	font-weight: 800;
+	cursor: pointer;
+	margin-bottom: 20px;
+	text-align: center;
+	color: white;
+	width: 280px;
+	height: 48px;
+	border-radius: 24px;
+	border: 6px solid #4c79b0;
+	background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.25) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#4c79b0;
+	background-blend-mode: soft-light, normal;
+	text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.2),
+		0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
 }
 
 .titleContainer {
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    margin-bottom: -50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: -50px;
 }
 
 .titleimgContainer {
-    margin-right: 30px; 
+	margin-right: 30px;
 }
 
 .scoreEntry {
-    font-size: 24px;
-    background: #FFFFFF;    
-    border-radius: 8px;
-    height: 35px;
-    margin-bottom: 16px;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	font-size: 24px;
+	background: #ffffff;
+	border-radius: 8px;
+	height: 35px;
+	margin-bottom: 16px;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.homeScoreBoard{
-    width: 50%;
-    padding: 24px;
-    background: linear-gradient(0deg, #4C79B0 0%, #144076 100%);    
-    border-radius: 16px;
-    font-family: "Poppins";
-    height: 40%;
+.homeScoreBoard {
+	width: 50%;
+	padding: 24px;
+	background: linear-gradient(0deg, #4c79b0 0%, #144076 100%);
+	border-radius: 16px;
+	font-family: "Poppins";
+	height: 40%;
 }
 
-#homepagetext{
-    color: white;
-    font-size: 25px;
-    text-shadow: 10px 10px 8px#211476;
+#homepagetext {
+	color: white;
+	font-size: 25px;
+	text-shadow: 10px 10px 8px#211476;
 }
 
 /* The Modal (background) */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 10; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.4); 
+	display: none;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content/Box */
 .modal-content {
-    position: relative;
-    border-radius: 16px;
-    border: 5px solid #4C79B0;
-    background: #4C79B0;
-    margin: 10% auto; 
-    padding: 20px;
-    width: 30%; 
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 10px;
-    box-sizing: border-box;
+	position: relative;
+	border-radius: 16px;
+	border: 5px solid #4c79b0;
+	background: #4c79b0;
+	margin: 10% auto;
+	padding: 20px;
+	width: 30%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	box-sizing: border-box;
 }
 
 /* The Close Button */
 .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 35px; 
-    height: 35px; 
-    cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-image: url("../images/Close.png"); /* Path to the original image */
+	background-size: cover; /* This ensures that your image covers the div size */
 }
 
 .close:hover {
-    transform: scale(1.1);
+	transform: scale(1.1);
+	background-image: url("../images/CloseHover.png"); /* Path to the new image when hovering */
 }
 
 /* Style the input fields */
-input[type=text], input[type=email], input[type=tel] {
-    border-radius: 16px;
-    border: 5px solid rgba(0, 0, 0, 0.70);
-    background: #F7F6F6;
-    width: calc(100% - 32px);
-    margin-bottom: 16px;
-    height: 50px;
-    padding-left: 16px;
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+	border-radius: 16px;
+	border: 5px solid rgba(0, 0, 0, 0.7);
+	background: #f7f6f6;
+	width: calc(100% - 32px);
+	margin-bottom: 16px;
+	height: 50px;
+	padding-left: 16px;
 }
 
 /* Style the label */
 .modal-content label {
-    margin-top: 10px;
-    display: block;
-    font-size: 18px;
-    color: #333;
+	margin-top: 10px;
+	display: block;
+	font-size: 18px;
+	color: #333;
 }
 
 /* Style the submit button */
-button[type=submit] {
-    color: white;
-    padding: 14px 20px;
-    border: none;
-    width: 100%;
-    cursor: pointer;
-    font-size: 36px;
-    font-family: "Poppins";
-    font-weight: 900;
-    border-radius: 16px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
-    background-blend-mode: soft-light, normal;
-    border: 3px solid rgba(10, 10, 10, 0.35);
+button[type="submit"] {
+	color: white;
+	padding: 14px 20px;
+	border: none;
+	width: 100%;
+	cursor: pointer;
+	font-size: 36px;
+	font-family: "Poppins";
+	font-weight: 900;
+	border-radius: 16px;
+	background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.25) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#4c79b0;
+	background-blend-mode: soft-light, normal;
+	border: 3px solid rgba(10, 10, 10, 0.35);
 }
 
-button[type=submit]:hover {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #5D7D70;
+button[type="submit"]:hover {
+	background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.25) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#5d7d70;
 }
 
 /* Style the modal to be centered in the viewport */
 .modal-content {
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
 }
 
 /* Adjust the padding and margin of the elements */
 #userInfoForm {
-    padding: 25px;
-    border-radius: 16px;
-    border: 5px solid #4C79B0;
-    background: #4C79B0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	padding: 25px;
+	border-radius: 16px;
+	border: 5px solid #4c79b0;
+	background: #4c79b0;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Optionally set a max-width for larger screens */
 @media screen and (min-width: 768px) {
-    .modal-content {
-        width: 40%;
-    }
+	.modal-content {
+		width: 40%;
+	}
 }
 
-#infoContainer{
-    border-radius: 8px;
-    background: linear-gradient(180deg, #9DC0ED 0%, #589CEE 100%);
-    padding: 24px 8px 24px 8px;
+#infoContainer {
+	border-radius: 8px;
+	background: linear-gradient(180deg, #9dc0ed 0%, #589cee 100%);
+	padding: 24px 8px 24px 8px;
 }
 
-#adminlogo{
-    position: absolute;
-    top: 50px;
-    right: 50px;
+#adminlogo {
+	position: absolute;
+	top: 50px;
+	right: 50px;
 }
 
-#timer{
-    border-radius: 16px;
-    border: 5px solid #153760;
-    background: linear-gradient(180deg, #4C79B0 0%, #0F3058 100%);
-    padding: 0px 32px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    color: white;
-    font-size: 48px;
-    position: absolute;
-    top: 20px;
-    right: 50;
-    height: 72px;
-    padding: 0px 32px;
+#timer {
+	border-radius: 16px;
+	border: 5px solid #153760;
+	background: linear-gradient(180deg, #4c79b0 0%, #0f3058 100%);
+	padding: 0px 32px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	color: white;
+	font-size: 48px;
+	position: absolute;
+	top: 20px;
+	right: 50;
+	height: 72px;
+	padding: 0px 32px;
 }
 
-#ballContainer{
-    display: flex; /* Aktiverer flexbox */
-    align-items: center; /* Sentrerer elementene vertikalt */
-    justify-content: center; /* Sentrerer elementene horisontalt */
-    gap: 20px
+#ballContainer {
+	display: flex; /* Aktiverer flexbox */
+	align-items: center; /* Sentrerer elementene vertikalt */
+	justify-content: center; /* Sentrerer elementene horisontalt */
+	gap: 20px;
 }
 
 .frontpagePoints {
-    color: white;
-    height: -30px;
-    font-size: 25px;
+	color: white;
+	height: -30px;
+	font-size: 25px;
 }
 
-#endGameMessage{
-    color: #FFF;
-    text-align: center;
-    font-family: "Poppins";
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    letter-spacing: -0.54px;
+#endGameMessage {
+	color: #fff;
+	text-align: center;
+	font-family: "Poppins";
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+	letter-spacing: -0.54px;
 }
 
-#viewLeaderboard{
-    padding: 8px;
-    width: 100%;
-    font-size: 25px;
-    font-family: "Poppins";
-    font-weight: 800;
-    cursor: pointer;
-    text-align: center;
-    color: white;
-    border-radius: 16px;
-    border: 3px solid rgb(10, 10, 10);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #4C79B0;
-    text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+#viewLeaderboard {
+	padding: 8px;
+	width: 100%;
+	font-size: 25px;
+	font-family: "Poppins";
+	font-weight: 800;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	border-radius: 16px;
+	border: 3px solid rgb(10, 10, 10);
+	background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.25) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#4c79b0;
+	text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.2),
+		0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
 }
 
-#messageContainer{
-    border-radius: 8px;
-    background: linear-gradient(180deg, #9DC0ED 0%, #589CEE 100%);
-    padding: 30px;
-    margin-bottom: 20px;
+#messageContainer {
+	border-radius: 8px;
+	background: linear-gradient(180deg, #9dc0ed 0%, #589cee 100%);
+	padding: 30px;
+	margin-bottom: 20px;
 }

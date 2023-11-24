@@ -1,72 +1,94 @@
 <!DOCTYPE html>
 <html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logg Inn</title>
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Poppins:wght@500;900&display=swap" rel="stylesheet">
-    <audio id="buttonSound" src="../sounds/pling.mp3"></audio>
-    <audio id="gameMusic" loop>
-        <source src="../sounds/gaming.mp3" type="audio/mpeg">
-    </audio>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Logg Inn</title>
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Faster+One&family=Poppins:wght@500;900&display=swap"
+			rel="stylesheet"
+		/>
+		<audio id="buttonSound" src="../sounds/pling.mp3"></audio>
+		<audio id="gameMusic" loop>
+			<source src="../sounds/gaming.mp3" type="audio/mpeg" />
+		</audio>
+	</head>
 
-</head>
+	<body id="lightningBackground">
+		<div id="loginContainer">
+			<div class="titleContainer">
+				<a href="/pages/admin-login.html">
+					<img id="adminlogo" src="../images/admin.svg" />
+				</a>
+				<div class="titleimgContainer">
+					<img src="../images/Group 32.svg" />
+				</div>
+				<p id="title">EXPERIS BLITZ</p>
+			</div>
 
+			<div class="homeScoreBoard">
+				<div id="firstPlace" class="scoreEntry">
+					<p>1. <span class="name">-</span></p>
+					<p class="score">0 Points</p>
+				</div>
+				<div id="secondPlace" class="scoreEntry runnerUps">
+					<p>2. <span class="name">-</span></p>
+					<p class="score">0 Points</p>
+				</div>
+				<div id="thirdPlace" class="scoreEntry runnerUps">
+					<p>3. <span class="name">-</span></p>
+					<p class="score">0 Points</p>
+				</div>
+				<button id="scoreboardButton">See All Scores</button>
+				<button id="startButton">Start</button>
+			</div>
 
-<body id="lightningBackground">
-    <div id="loginContainer">
-        <div class="titleContainer">
-            <a href="/pages/admin-login.html">
-                <img id="adminlogo" src="../images/admin.svg"/>
-            </a>
-                <div class="titleimgContainer">
-                    <img src="../images/Group 32.svg"/>
-                </div>
-            <p id="title">EXPERIS BLITZ</p>
-        </div>
-
-
-        <div class="homeScoreBoard">
-            <div id="firstPlace" class="scoreEntry">
-                <p>1. <span class="name">-</span></p> <p class="score">0 Points</p>
-            </div>
-            <div id="secondPlace" class="scoreEntry runnerUps">
-                <p>2. <span class="name">-</span></p> <p class="score">0 Points</p>
-            </div>
-            <div id="thirdPlace" class="scoreEntry runnerUps">
-                <p>3. <span class="name">-</span></p> <p class="score">0 Points</p>
-            </div>
-            <button id="scoreboardButton">See All Scores</button> 
-            <button id="startButton">Start</button>
-        </div>
-
-
-    <div id="userModal" class="modal">
-        <div class="modal-content">
-        <img src="../images/Close.png" class="close" alt="Close"/>
-          <form id="userInfoForm">
-            <h2>User Info</h2>
-            <div id="infoContainer">
-                <input type="text" id="username" name="username" placeholder="Your Name: " required>
-                <input type="text" id="number" name="number" placeholder="Phone: " required>
-                <input type="email" id="email" name="email" placeholder="E-mail: " required>
-                <button type="submit" id="submitUserInfo">Start Game</button>
-            </div>
-          </form>
-        </div>
-      </div>
-        
-
-    </div>
-    <div id="ballContainer">
-
-        <img src="../images/GoldExperis.gif"/> <span class="frontpagePoints"> +5 Points </span>
-        <img src="../images/BlueBig.gif"/>  <span class="frontpagePoints"> +2 Points </span>
-        <img src="../images/Alert.gif"/> <span class="frontpagePoints"> -2 Points </span>
-    </div>
-    <script src="../javascript/homepage.js"></script>
-</body>
+			<div id="userModal" class="modal">
+				<div class="modal-content">
+					<div class="close" alt="Close"></div>
+					<form id="userInfoForm">
+						<h2>User Info</h2>
+						<div id="infoContainer">
+							<input
+								type="text"
+								id="username"
+								name="username"
+								placeholder="Your Name: "
+								required
+							/>
+							<input
+								type="text"
+								id="number"
+								name="number"
+								placeholder="Phone: "
+								required
+							/>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								placeholder="E-mail: "
+								required
+							/>
+							<button type="submit" id="submitUserInfo">
+								Start Game
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="ballContainer">
+			<img src="../images/GoldExperis.gif" />
+			<span class="frontpagePoints"> +5 Points </span>
+			<img src="../images/BlueBig.gif" />
+			<span class="frontpagePoints"> +2 Points </span>
+			<img src="../images/Alert.gif" />
+			<span class="frontpagePoints"> -2 Points </span>
+		</div>
+		<script src="../javascript/homepage.js"></script>
+	</body>
 </html>
