@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://github.com/vildekure/SpillProsjekt/blob/main/pages/homepage.html",
+      "permanent": true
+    }
+  ]
+}
