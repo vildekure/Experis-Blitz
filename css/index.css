@@ -287,10 +287,11 @@ h2 {
 }
 
 .titleContainer {
+    margin-top: -75px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: -50px;
+  margin-bottom: -75px;
 }
 
 .titleimgContainer {
@@ -481,7 +482,7 @@ button[type="submit"]:hover {
 
 .frontpagePoints {
   color: white;
-  height: -30px;
+  margin-left: -70px;
   font-size: 25px;
 }
 
