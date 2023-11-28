@@ -181,14 +181,13 @@ h2 {
 }
 
 .points {
-    position: absolute;
-    color: #fff; /* Choose a color that is visible on your background */
-    font-size: 1.2em;
-    font-weight: bold;
-    opacity: 1;
-    transition: top 0.9s ease-out, opacity 0.9s ease-out;
+	position: absolute;
+	color: #fff; /* Choose a color that is visible on your background */
+	font-size: 1.2em;
+	font-weight: bold;
+	opacity: 1;
+	transition: top 0.9s ease-out, opacity 0.9s ease-out;
 }
-
 
 #firstPlace {
 	border: 5px solid #ffd749;
@@ -421,7 +420,6 @@ input[type="tel"] {
 	background-image: url("../images/CloseHover.png"); /* Path to the new image when hovering */
 }
 
-/* Style the submit button */
 button[type="submit"] {
 	color: white;
 	padding: 14px 20px;
@@ -546,7 +544,7 @@ button[type="submit"]:hover {
 	gap: 20px;
 }
 
-#gameMessage{
+#gameMessage {
 	color: white;
 	font-size: 25px;
 }
@@ -555,7 +553,8 @@ button[type="submit"]:hover {
 	color: white;
 	margin-left: -70px;
 	font-size: 25px;
-	text-shadow: -2px -2px 0 #4450AB, 2px -2px 0 #4450AB,-2px 2px 0 #4450AB,2px 2px 0 #4450AB;
+	text-shadow: -2px -2px 0 #4450ab, 2px -2px 0 #4450ab, -2px 2px 0 #4450ab,
+		2px 2px 0 #4450ab;
 }
 
 #endGameMessage {
@@ -607,7 +606,7 @@ button[type="submit"]:hover {
 			rgba(0, 0, 0, 0.25) 0%,
 			rgba(255, 255, 255, 0) 100%
 		),
-		#08A7D2;
+		#08a7d2;
 	text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.2),
 		0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
 }
@@ -620,16 +619,15 @@ button[type="submit"]:hover {
 }
 
 #lightningLeft {
-    position: absolute;
-    left: 0%;
-    top: 0%; 
+	position: absolute;
+	left: 0%;
+	top: 0%;
 	width: 200px;
 }
 
 #lightningRight {
-    position: absolute;
+	position: absolute;
 	right: 0%;
-	top: 0%; 
+	top: 0%;
 	width: 200px;
 }
-
